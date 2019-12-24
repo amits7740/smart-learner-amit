@@ -39,7 +39,7 @@ const Product = () => {
              <div class="topnav">
         <a class="active" href="/"><font color="black">Home</font></a>
         <a href="#about"><font color="black">About</font></a>
-        <a href="/"><font color="black">Contact</font></a>
+        <a href="/tshirt"><font color="black">Contact</font></a>
         
         <div class="search-container">
         <input type="text"  size="70" placeholder="Search your Item here"className="input" onChange={(event) => setSearchValue(event.target.value)} />
@@ -100,7 +100,7 @@ const Product = () => {
            
           
           {searchValue ? '' : <Pagination productPerPage={productPerPage} totalProduct={data.length} paginate={paginate} /> }
-          <center><small>Designed by <a href="#" target="_blank"><font color="teal">IBM india</font></a></small></center>s
+          <center><small>Designed by <a href="#" target="_blank"><font color="teal">IBM india</font></a></small></center>
         </div>
             
         
