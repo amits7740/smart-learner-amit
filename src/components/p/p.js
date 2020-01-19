@@ -5,8 +5,7 @@ import Pagination from '../pagination/pagination';
 import { browserHistory } from "react-router";
 
 
-import PropTypes from "prop-types";
-import SpeechRecognition from "react-speech-recognition";
+
 
 
 
