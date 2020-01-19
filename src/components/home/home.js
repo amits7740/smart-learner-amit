@@ -13,21 +13,21 @@ class Home extends React.Component {
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-11">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                      <a href="/" class="btn_1">Home</a>
+                   
+                        <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                <a href="/" class="btn_1">Home</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                             <span class="menu_icon"><i class="fas fa-bars"></i></span>
                         </button>
-
-                        <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                  ---------
                                 <a href="/tshirt" class="btn_1">Contact</a>
                                 </li>
-                                
-                              
+                                <li class="nav-nav">
+                                <a href="/p" class="btn_1">products</a>
+                                </li>
                             </ul>
                         </div>
                      
@@ -51,9 +51,9 @@ class Home extends React.Component {
                     <div class="single_banner_slider">
                         <div class="banner_text">
                             <div class="banner_text_iner">
-                                <h5>Kool Web Store</h5>
+                                <h3>Kool Web Store</h3>
                                 <h1>Fashion Collection 2020</h1>
-                                <a href="/product" class="btn_1">product Page</a>
+                                <a href="/p" class="btn_1">products</a>
                             </div>
                         </div>
                     </div>
@@ -94,8 +94,8 @@ class Home extends React.Component {
                         <h4>Address</h4>
                         <ul class="list-unstyled">
                             <li><a href="#">DLF 2, IBM, kolkata</a></li>
-                            <li><a href="#">+91 7070763939</a></li>
-                            <li><font color="white">amits121@in.ibm.com</font></li>
+                            <li><a href="#">+91 3346772112</a></li>
+                            <li><font color="white">smartlearner@in.ibm.com</font></li>
                         </ul>
                     </div>
                 </div>

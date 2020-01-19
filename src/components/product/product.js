@@ -6,7 +6,11 @@ import ProductData from '../../data/product.json';
 import Pagination from '../pagination/pagination';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
+
 const Product = () => {
+
+  
+
 
     const data = ProductData.items;
     const [currentPage, setCurrentPage] = useState(1);
@@ -30,6 +34,8 @@ const Product = () => {
         }
     }
 
+   
+
     return (
 
 
@@ -46,13 +52,13 @@ const Product = () => {
             <img onclick="startDictation()" src="mic.png" />
         </div>
         </div>
-          
+        <section class="banner_part" >
            <center><h1 class="tt"><b>Product Page Of Smart Learner kool App</b></h1></center>
            <center><p>You are searching for <b>{searchValue}</b></p></center>
             <form id="labnol" method="get" action="transcript">
             
             </form>
-           
+           F
            
                 <tbody class="grid-container" >
                 
@@ -71,8 +77,10 @@ const Product = () => {
         <div class="flip-card1">
             <div class="flip-card-inner1">
                  <div class="flip-card-front1">
-
-                          <b class ="size"> {d.description}</b><br/><b>Size:</b> {d.size}<br/><b>Colour:</b> {d.color}<br/><b>Price:</b> {d.price}$<br/><font color="red"><b>{d.discount} % off</b></font>
+                     
+                 <b class ="size"> {d.description}</b>
+                 <img class="p13"src={"http://django-ex-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/"+d.sku}/>
+<br/><b>Size:</b> {d.size}<br/><b>Colour:</b> {d.color}<br/><b>Price:</b> {d.price}$<br/><font color="red"><b>{d.discount} % off</b></font>
                           
 
                  </div>
@@ -84,7 +92,7 @@ const Product = () => {
              </div>
          </div>
         
-   
+         <a href="/t" target="_blank" class="button instagram" ><span class="gradient"></span><r class="t">Buy</r></a>
    
      </td>                         
                         )                             
@@ -98,9 +106,9 @@ const Product = () => {
                 
                 </tbody>
            
-          
+                </section>
           {searchValue ? '' : <Pagination productPerPage={productPerPage} totalProduct={data.length} paginate={paginate} /> }
-          <center><small>Designed by <a href="#" target="_blank"><font color="teal">IBM india</font></a></small></center>
+          <center><small>Designed by <a href="#" target="_blank"><font color="teal">Smart Learner  </font></a></small></center>
         </div>
             
         

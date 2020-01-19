@@ -208,7 +208,7 @@
 
 /* line 28, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_banner.scss */
 .banner_part .single_banner_slider .banner_text h1 {
-  font-size: 100px;
+  font-size: 80px;
   text-transform: capitalize;
   font-weight: 700;
   line-height: 110px;
@@ -397,7 +397,7 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   text-transform: capitalize;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 /* line 34, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_button.scss */
