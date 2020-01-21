@@ -29,7 +29,10 @@ console.log(id)
 this.setState({ filter: id });
        
     }
-
+    showDetails() {
+        window.open('/p','_self');
+ 
+     }
     render(){  
    
 
@@ -39,7 +42,7 @@ this.setState({ filter: id });
                  <div class="topnav">
             <a class="active" href="/"><font color="black">Home</font></a>
             <a href="#about"><font color="black">About</font></a>
-            <a href="/tshirt"><font color="black">Contact</font></a>
+            <a href="/contact"><font color="black">Contact</font></a>
             
             <div class="search-container">
             
@@ -107,7 +110,7 @@ this.state.filter == ''|| d.ITEM_NUMBER.includes(this.state.filter)?
 				<p class="text-center">Your booking has been confirmed. Check your email for details.</p>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+				<button class="btn btn-success btn-block" data-dismiss="modal"  onClick={evt => this.showDetails()}>OK</button>
 			</div>
 		</div>
 	</div>

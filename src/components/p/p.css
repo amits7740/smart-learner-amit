@@ -1,20 +1,18 @@
 .grid-container {
-    display:grid ;
-    grid-template-columns: auto auto auto  ;
-  
-
-  
-
-  }
-  
-  .grid-item {
-    
-  
+    /*display:grid ;
+    grid-template-columns: auto auto auto; */
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+  /*display: grid;*/
+    flex-wrap: wrap;
+  } 
+  .grid-item {  
     padding: 20px;
   }
-
- 
-
+  .topnav {
+    overflow: hidden;
+    background-color: #dde5e8;
+  }
   .button {
     
     display: block;

@@ -5,26 +5,71 @@ import Pagination from '../pagination/pagination';
 import { browserHistory } from "react-router";
 
 
+import PropTypes from "prop-types";
+import SpeechRecognition from "react-speech-recognition";
 
+const BrowserSpeechRecognition =
+    typeof window !== 'undefined' &&
+    (window.SpeechRecognition ||
+        window.webkitSpeechRecognition ||
+        window.mozSpeechRecognition ||
+        window.msSpeechRecognition ||
+        window.oSpeechRecognition)
+const recognition = BrowserSpeechRecognition
+    ? new BrowserSpeechRecognition()
+    : null
 
+const browserSupportsSpeechRecognition = recognition !== null
 
-
-
-class p extends React.Component {
-
+export default class fetchrandomuser extends React.Component {
+    if(browserSupportsSpeechRecognition) {
+        recognition.continous = true
+        recognition.interimResults = true
+        recognition.lang = 'en-US'
+    }
     state = {
         loading: true,
         d: [],
         a: [],
-
         filter: '',
-
+        listening: false
     };
 
     constructor(props) {
         super(props);
         this.updateInputValue = this.updateInputValue.bind(this);
         this.showDetails = this.showDetails.bind(this);
+        this.toggleListen = this.toggleListen.bind(this);
+        this.handleListen = this.handleListen.bind(this);
+    }
+
+    toggleListen() {
+        this.setState({
+            listening: !this.state.listening
+        }, this.handleListen)
+    }
+
+    handleListen() {
+        if (this.state.listening) {
+            recognition.start()
+            let finalTranscript = ''
+            recognition.onresult = event => {
+                let interimTranscript = ''
+
+                for (let i = event.resultIndex; i < event.results.length; i++) {
+                    const transcript = event.results[i][0].transcript;
+                    if (event.results[i].isFinal) finalTranscript += transcript + ' ';
+                    else interimTranscript += transcript;
+                }
+                console.log(finalTranscript);
+                this.setState({
+                    filter: finalTranscript
+                })
+            };
+            recognition.onend = () => {
+                this.toggleListen();
+            }
+        }
     }
 
     async componentDidMount() {
@@ -34,6 +79,11 @@ class p extends React.Component {
         const data = await response.json();
 
         this.setState({ d: data.data, loading: false })
+
+        //const [currentPage, setCurrentPage] = useState(1);
+        //const [productPerPage] = useState(15);
+        //const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
 
         console.log(data);
 
@@ -62,27 +112,19 @@ class p extends React.Component {
             <div className="productContainer1">
                 <div class="topnav">
                     <a class="active" href="/"><font color="black">Home</font></a>
-                    <a href="#about"><font color="black">About</font></a>
-                    <a href="/tshirt"><font color="black">Contact</font></a>
+                    <a href="/contact"><font color="black">Contact</font></a>
 
                     <div class="search-container">
 
-                        <input type="text" size="70" placeholder="Search your Item here" onChange={evt => this.updateInputValue(evt)} />
-                        <img onclick="startdictation()" src="mic.png" />
-
+                        <input type="text" size="70" name = "srchtxt" placeholder="Search your Item here" onChange={evt => this.updateInputValue(evt)} />
+                        {this.state.listening ? <div></div> : <img onClick={this.toggleListen} src="mic.png" />}
                     </div>
                 </div>
                 <section class="banner_part" >
-                    <center><h1 class="tt"><b>Product Page Of Smart Learner kool App</b></h1></center>
-                    <center><p>You are searching for <b></b></p></center>
-
-
-
+                    <center><h1 class="tt"><b>Welcome to Products</b></h1></center>
+                   
                     <div class="name">
-
-
-
-                        
+         
                     <div class="grid-container" >
                  
                             {this.state.d.map(d => (
@@ -152,5 +194,5 @@ class p extends React.Component {
 
 
 
-export default p;
+//export default p;
 

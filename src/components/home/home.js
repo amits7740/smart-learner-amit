@@ -9,121 +9,36 @@ class Home extends React.Component {
   return (
 <div>
 
-        <div class="container-fluid">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-11">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                   
-                        <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                <a href="/" class="btn_1">Home</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="menu_icon"><i class="fas fa-bars"></i></span>
-                        </button>
-                                <a href="/tshirt" class="btn_1">Contact</a>
-                                </li>
-                                <li class="nav-nav">
-                                <a href="/p" class="btn_1">products</a>
-                                </li>
-                            </ul>
-                        </div>
-                     
-                               
-                              
-                           
-                    </nav>
-                </div>
-            </div>
+<ul class="cb-slideshow">
+            <li><span>Image 01</span><div><h3>Womens wear</h3></div></li>
+            <li><span>Image 02</span><div><h3>Mens wear</h3></div></li>
+            <li><span>Image 03</span><div><h3>Coming soon</h3></div></li>
+            <li><span>Image 01</span><div><h3>Womens wear</h3></div></li>
+            <li><span>Image 02</span><div><h3>Mens wear</h3></div></li>
+            <li><span>Image 03</span><div><h3>Coming soon</h3></div></li>
+            
+        </ul>
+        <div class="container">
+           
+         
+            <header>
+               
+				<p class="codrops-demos">
+                   <a href="/">Home</a>
+					<a href="/p">Product</a>
+					<a href="/contact">Contact</a>
+					
+				</p>
+            </header>
         </div>
         
   
 
   
    
-    <section class="banner_part" >
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7">
-                <div class="banner_slider">
-                    <div class="single_banner_slider">
-                        <div class="banner_text">
-                            <div class="banner_text_iner">
-                                <h3>Kool Web Store</h3>
-                                <h1>Fashion Collection 2020</h1>
-                                <a href="/p" class="btn_1">products</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
-<footer class="footer_part">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-sm-6 col-lg-2">
-                    <div class="single_footer_part">
-                        <h4>Category</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Male</a></li>
-                            <li><a href="#">Female</a></li>
-                            <li><a href="#">Shoes</a></li>
-                            <li><a href="#">Fashion</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-2">
-                    <div class="single_footer_part">
-                        <h4>Company</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="/tshirt">About</a></li>
-                            <li><a href="">News</a></li>
-                            <li><a href="">FAQ</a></li>
-                            <li><a href="/tshirt">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="single_footer_part">
-                        <h4>Address</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#">DLF 2, IBM, kolkata</a></li>
-                            <li><a href="#">+91 3346772112</a></li>
-                            <li><font color="white">smartlearner@in.ibm.com</font></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="single_footer_part">
-                        <h4>Newsletter</h4>
-                        <div id="mc_embed_signup">
-                         
-                        </div>
-                        <div class="social_icon">
-                            <a href="#"><i class="ti-facebook"></i></a>
-                            <a href="#"><i class="ti-twitter-alt"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class="copyright_text">
-                        
-Copyright &copy; All rights reserved | IBM INDIA <i class="ti-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Smart-Learner</a>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
 
 
