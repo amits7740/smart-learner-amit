@@ -5,7 +5,7 @@ import Home from './components/home/home';
 import Product from './components/product/product'
 import Contact from './components/tshirt/contact'
 import P from './components/p/p'
-import PNEW from './components/pnew/pnew'
+
 import Pagination from './components/pagination/pagination'
 import T from './components/t/t'
 import PS from './components/ps/ps'
@@ -24,7 +24,7 @@ ReactDOM.render(
        {/*<Route path="pagination" component={Pagination} /> */}
         <Route path="contact" component={Contact} />
         <Route path="p" component={P} />
-        <Route path="pnew" component={PNEW} />
+     
         <Route path="t" component={T} />
         <Route path="ps" component={PS} />
         <Route path="server" component={Server} />
