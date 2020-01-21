@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Home from './components/home/home';
 import Product from './components/product/product'
-import Tshirt from './components/tshirt/tshirt'
+import Contact from './components/tshirt/contact'
 import P from './components/p/p'
+import PNEW from './components/pnew/pnew'
+import Pagination from './components/pagination/pagination'
 import T from './components/t/t'
-
+import PS from './components/ps/ps'
+import Server from './components/ps/server';
 import Cart from './components/cart/cart'
 import * as serviceWorker from './serviceWorker';
 import { Router, Route, browserHistory, IndexRoute } from "react-router";
@@ -18,11 +21,13 @@ ReactDOM.render(
             <IndexRoute component={Home} />
         </Route>
         <Route path="product" component={Product} />
-        {/* <Route path="search" component={Search} /> */}
-        <Route path="tshirt" component={Tshirt} />
+       {/*<Route path="pagination" component={Pagination} /> */}
+        <Route path="contact" component={Contact} />
         <Route path="p" component={P} />
+        <Route path="pnew" component={PNEW} />
         <Route path="t" component={T} />
-       
+        <Route path="ps" component={PS} />
+        <Route path="server" component={Server} />
         <Route path="cart" component={Cart} />
     </Router>, 
     
