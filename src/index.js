@@ -9,7 +9,7 @@ import P from './components/p/p'
 import Pagination from './components/pagination/pagination'
 import T from './components/t/t'
 import PS from './components/ps/ps'
-import Server from './components/ps/server';
+
 import Cart from './components/cart/cart'
 import * as serviceWorker from './serviceWorker';
 import { Router, Route, browserHistory, IndexRoute } from "react-router";
@@ -27,7 +27,7 @@ ReactDOM.render(
      
         <Route path="t" component={T} />
         <Route path="ps" component={PS} />
-        <Route path="server" component={Server} />
+       
         <Route path="cart" component={Cart} />
     </Router>, 
     
