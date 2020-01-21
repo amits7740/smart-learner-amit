@@ -72,7 +72,10 @@
     display: inline-block;
     margin: 100px auto;    
 }
-
+.topnav {
+  overflow: hidden;
+  background-color: #dde5e8;
+}
 
 
 .butto {
@@ -116,6 +119,17 @@
     transform: translatex(-140px);
     animation: 18s linear 0s infinite move;
   }
+  .grid-container {
+    /*display:grid ;
+    grid-template-columns: auto auto auto; */
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+  /*display: grid;*/
+    flex-wrap: wrap;
+  } 
+  .grid-item {  
+    padding: 20px;
+  }
   
   @keyframes move {
     0% {
@@ -140,12 +154,6 @@
       background: radial-gradient(90px circle at top center, rgba(238,88,63,.5) 30%, rgba(255,255,255,0));
     }
   }
-
-
-
-
-
-
 
   .flip-card12 {
  

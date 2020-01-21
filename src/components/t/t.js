@@ -4,39 +4,44 @@ import queryString from 'query-string'
 import './t.css'
 import P from '../p/p';
 
-
-
   export default class fetchrandomuser extends React.Component{
     
 
     state={
         loading:true,
-        d: [],  
+        d: [], 
+        dnew: [], 
        a:[],
        filter: '',
   
     };
     
     constructor(props) {
-        super(props);
-       
-       
+        super(props);   
     }
 
-
    async componentDidMount(){
-   
-        const url="http://smartbuyms-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/products";
-        const response = await fetch(url);
-        const data =await response.json();
+
+
+    const url="http://smartbuyms-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/products";
+    const response = await fetch(url);
+    const data =await response.json();
        
-        this.setState({d:data.data,loading:false})
+    this.setState({d:data.data,loading:false})
        
-        console.log(data);
-        const value=queryString.parse(this.props.location.search);
-const id=value.id;
-console.log(id)
-this.setState({ filter: id });
+    console.log(data);
+    const value=queryString.parse(this.props.location.search);
+    const id=value.id;
+    console.log(id)
+    this.setState({ filter: id}); 
+
+    const urlnew="http://smartbuymsnew-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/products/" + id;
+    const responsenew = await fetch(urlnew);
+    const datanew =await responsenew.json();
+
+    this.setState({dnew:datanew.data,loading:false})
+    console.log(datanew);
+      
        
     }
     showDetails(num) {
@@ -44,8 +49,14 @@ this.setState({ filter: id });
 
    }
 
-   
+   showDetailsnew(num) {
+    window.open('/t?id=' + num,'_blank');
 
+ }
+ showDetailss() {
+  window.open('/p','_self');
+
+}
  
 render(){  
    
@@ -55,8 +66,7 @@ render(){
         <div className="productContainer1">
              <div class="topnav">
         <a class="active" href="/"><font color="black">Home</font></a>
-        <a href="#about"><font color="black">About</font></a>
-        <a href="/tshirt"><font color="black">Contact</font></a>
+        <a href="/contact"><font color="black">Contact</font></a>
         
         <div class="search-container">
         
@@ -64,27 +74,18 @@ render(){
         </div>
         </div>
         <section class="banner_part" >
-           <center><h1 class="tt"><b>Product Page Of Smart Learner kool App</b></h1></center>
+ 
+           <center><h1 class="tt"><b>Product Details</b></h1></center>
             <div class="name">  
         <tbody class >  
-      
         <div>
-
-<a href="/p" target="" class="button instagram" ><span class="gradient"></span><r class="t">Back</r></a>
-
-</div>
+          <a href="/p" target="" class="button instagram" ><span class="gradient"></span><r class="t">Back</r></a>
+      </div>
 
         <div class="text-center">
-
-	
-
         {this.state.d.map(d => (
-
 this.state.filter == ''|| d.ITEM_NUMBER.includes(this.state.filter)?
-
-
 <div>
-
 <div class="wrapper1">
     <div class="product-img">
       <img src={"http://django-ex-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/" + d.ITEM_NUMBER} height="470" width="327"/>
@@ -108,7 +109,6 @@ this.state.filter == ''|| d.ITEM_NUMBER.includes(this.state.filter)?
    
     </div>
   </div>
-
 
 </div> : <div></div>
 
@@ -135,21 +135,77 @@ this.state.filter == ''|| d.ITEM_NUMBER.includes(this.state.filter)?
 				<p class="text-center">Your booking has been confirmed. Check your email for details.</p>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+				<button class="btn btn-success btn-block" data-dismiss="modal" onClick={evt => this.showDetailss()}>OK</button>
 			</div>
 		</div>
 	</div>
 </div> 
-
-
-
 </tbody>
 </div>
-</section>
 
-<center><small>Designed by <a href="#" target="_blank"><font color="teal">Smart Learner  </font></a></small></center>
+  <center><h1 class="tt"><b>Similar Products</b></h1></center>
+                   
+                   <div class="name">
+        
+                   <div class="grid-container" >
+                
+                           {this.state.dnew.map(dnew => (
+
+                              /* this.state.filter == '' || dnew.DESCRIPTION.toLowerCase().includes(this.state.filter.toLowerCase()) || dnew.SKU_ATTRIBUTE_VALUE1.toLowerCase().includes(this.state.filter.toLowerCase()) || dnew.BRAND.toLowerCase().includes(this.state.filter.toLowerCase()) ?
+                            */
+
+                                   <div class="grid-item">
+
+                                       <div class="flip-card1">
+                                           <div class="flip-card-inner1">
+                                               <div class="flip-card-front1">
+
+                                                   <div> <b class="size"> {dnew.DESCRIPTION}</b></div>
+                                                   <img class="p13"  onClick={evt => this.showDetails(dnew.ITEM_NUMBER)}src={"http://django-ex-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/" + dnew.ITEM_NUMBER} />
+
+                                                   <br /><b class="size1">Size:</b> {dnew.SKU_ATTRIBUTE_VALUE1}<br /><b class="size1">Colour:</b> {dnew.SKU_ATTRIBUTE_VALUE2} <br /><b class="size1">Price:</b><b class="size2"> {dnew.LIST_PRICE}$</b><br /><font color="red"><b>------{dnew.DISCOUNT} % off------</b></font>
+
+                                                   <img src="img/new.png" class="new" alt="" />
+                                               </div>
+
+                                               <div class="flip-card-back1">
+
+                                                   <b class="size1">Description:</b>  {dnew.LONG_DESCRIPTION}<br /><b class="size1">In Stock : </b>{dnew.IN_STOCK} <br /><b class="size1">Brand:</b> {dnew.BRAND}
+                                                   <img src="img/new.png" class="new" alt="" />
+
+                                               </div>
+                                           </div>
+
+                                       </div>
+
+
+
+
+
+
+                                    {dnew.IN_STOCK === 'Yes' ?<button onClick={evt => this.showDetailsnew(dnew.ITEM_NUMBER)} class="button instagram" ><span class="gradient"></span><r class="t">Buy</r></button> :
+                                           <a class="button instagram" ><span class="gradient"></span><b><font color="red">Out of stock</font></b></a>
+
+                                       }
+
+
+                                   </div> /*: <div></div> */
+
+                                  
+                           ))}
+
 
 </div>
+
+                   </div>
+
+               </section>
+
+               <center><small>Designed by <a href="#" target="_blank"><font color="teal">Smart Learner  </font></a></small></center>
+
+           </div>
+  
+
 
     ) ;
   

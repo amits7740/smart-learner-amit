@@ -1,32 +1,8 @@
-.productContainer {
-    background-color: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: rgb(0, 0, 0);
-    font-size: 14px;
-}
 
-.productContainer h1 {
-    margin: 2rem 0;
-}
 
-.active {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #ffffff;
-}
 
-.searchInput {
-    display: flex;
-}
 
-.input {
-    margin-bottom: 10px;
-}
+
 
 .tt{
 
@@ -51,13 +27,68 @@
 
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
 
-.warning-msg
-{
-  margin: 100px 0;
-  padding: 30px;
-  border-radius: 5px 5px 5px 5px;
-}
-.warning-msg {
-    color: rgb(255, 255, 255);
-    background-color: rgb(18, 111, 139);
+
+
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 327px;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  .card {
+    box-shadow: 50px 9px 8px 0 rgba(0, 0, 0, 0.2);
+  
+  }
+  
+  .container {
+    padding: 10px 16px;
+    width: 400px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+   
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  .ff{
+      height:300px;
+      width:300px;
+      
   }
