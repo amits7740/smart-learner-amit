@@ -40,9 +40,10 @@ this.setState({ filter: id });
         return (
             <div className="productContainer1">
                  <div class="topnav">
-            <a class="active" href="/"><font color="black">Home</font></a>
-            <a href="#about"><font color="black">About</font></a>
+            <a href="/"><font color="black">Home</font></a>
+            <a href="/p"><font color="black"></font></a>
             <a href="/contact"><font color="black">Contact</font></a>
+            <a class="active" href="/cart"><font color="black">Cart</font></a>
             
             <div class="search-container">
             
@@ -92,7 +93,7 @@ this.state.filter == ''|| d.ITEM_NUMBER.includes(this.state.filter)?
 
 </div>
 
-</div>:<div></div>
+</div>:<div>{d.ITEM_NUMBER==1001?<div><br/><center><b class ="size">No Product in the cart :(</b></center></div>:<div></div>}</div>
 ))}
 
 
