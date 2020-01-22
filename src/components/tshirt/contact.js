@@ -15,9 +15,9 @@ class tshirt extends React.Component {
 
   
         <div class="topnav">
-                    <a class="active" href="/"><font color="black">Home</font></a>
-                  
+                    <a href="/"><font color="black">Home</font></a>
                     <a href="/p"><font color="black">Product</font></a>
+                    <a  class="active" href="/contact"><font color="black">Contact</font></a>
 
                 </div>
     <div  >
