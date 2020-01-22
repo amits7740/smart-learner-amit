@@ -24,9 +24,10 @@ class Home extends React.Component {
             <header>
                
 				<p class="codrops-demos">
-                   <a href="/">Home</a>
+                        <a href="/">Home</a>
 					<a href="/p">Product</a>
 					<a href="/contact">Contact</a>
+					<a href="/team">Team Members</a>
 					
 				</p>
             </header>
