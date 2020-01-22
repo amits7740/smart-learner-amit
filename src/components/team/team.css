@@ -67,6 +67,10 @@ height:500px;
   display: table;
  
 }
+.row{
+  padding-left: 70px;
+
+}
 
 .title {
   color: grey;
