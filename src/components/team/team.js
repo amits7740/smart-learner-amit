@@ -16,7 +16,7 @@ class team extends React.Component {
                     <a  class="active" href="/team"><font color="black">Team Members</font></a>
                 </div>
     <center><p1><b><font color="red">Team Memebers</font></b></p1></center>
-    <div class="row">
+   <div class="row">
     <div class="column">
     <div class="card" width="400px">
       <img class="ff"src="./anamikadi.JPG" alt="Jane" />
@@ -25,7 +25,7 @@ class team extends React.Component {
         <p class="title">Data Warehousing</p>
        <p> Team Leader</p>
         <p>anamika_chatterjee@in.ibm.com</p>
-        <p><center><button class="button1" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=000GRQ744" target="_blank"><b>Bluepage</b></a></button></center></p>
+        <p><center><button class="button3" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=000GRQ744" target="_blank"><b>Bluepage</b></a></button></center></p>
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@ class team extends React.Component {
         <p class="title">Senior System Engineer</p>
         <p> Team Captain</p>
         <p>sayaroy3@in.ibm.com</p>
-        <p><center><button class="button1" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=00902V744" target="_blank"><b>Bluepage</b></a></button></center></p>
+        <p><center><button class="button3" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=00902V744" target="_blank">Bluepage</a></button></center></p>
       </div>
     </div>
   </div>
@@ -49,11 +49,11 @@ class team extends React.Component {
         <p class="title">Application Developer - RPA</p>
        
         <p>amits121@in.ibm.com</p>
-        <p><center><button class="button1" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=000GRQ744" target="_blank"><b>Bluepage</b></a></button></center></p>
+        <p><center><button class="button3" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=000GRQ744" target="_blank">Bluepage</a></button></center></p>
       </div>
     </div>
-  </div>
-
+  </div><br/>
+  
  
   
   <div class="column">
@@ -64,7 +64,7 @@ class team extends React.Component {
         <p class="title">Application Developer - RPA</p>
        
         <p>harajena@in.ibm.com</p>
-        <p><center><button class="button1" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=09574J744" target="_blank"><b>Bluepage</b></a></button></center></p>
+        <p><center><button class="button3" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=09574J744" target="_blank">Bluepage</a></button></center></p>
       </div>
     </div>
   </div>
@@ -76,7 +76,7 @@ class team extends React.Component {
         <p class="title">Application Developer - Devops</p>
        
         <p>snandan1@in.ibm.com</p>
-        <p><center><button class="button1" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=0004O8744" target="_blank"><b>Bluepage</b></a></button></center></p>
+        <p><center><button class="button3" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=0004O8744" target="_blank">Bluepage</a></button></center></p>
       </div>
     </div>
   </div>
@@ -84,11 +84,11 @@ class team extends React.Component {
     <div class="card" width="400px">
       <img class="ff"src="./abhipsa.jpeg" alt="Jane" />
       <div class="container">
-        <h2>Abhipsa Chakraborty</h2>
+        <h2>Abhipsa chakraborty</h2>
         <p class="title">Application Developer - Cognos</p>
        
         <p>abhipc94@in.ibm.com</p>
-        <p><center><button class="button1" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=0644F8744" target="_blank"><b>Bluepage</b></a></button></center></p>
+        <p><center><button class="button3" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=0644F8744" target="_blank">Bluepage</a></button></center></p>
       </div>
     </div>
   </div>
