@@ -5,11 +5,9 @@ import Home from './components/home/home';
 import Product from './components/product/product'
 import Contact from './components/tshirt/contact'
 import P from './components/p/p'
-
 import Pagination from './components/pagination/pagination'
 import T from './components/t/t'
-import PS from './components/ps/ps'
-
+import Team from './components/team/team'
 import Cart from './components/cart/cart'
 import * as serviceWorker from './serviceWorker';
 import { Router, Route, browserHistory, IndexRoute } from "react-router";
@@ -21,13 +19,10 @@ ReactDOM.render(
             <IndexRoute component={Home} />
         </Route>
         <Route path="product" component={Product} />
-       {/*<Route path="pagination" component={Pagination} /> */}
         <Route path="contact" component={Contact} />
         <Route path="p" component={P} />
-     
         <Route path="t" component={T} />
-        <Route path="ps" component={PS} />
-       
+        <Route path="team" component={Team} />
         <Route path="cart" component={Cart} />
     </Router>, 
     
