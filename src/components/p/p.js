@@ -112,6 +112,7 @@ export default class fetchrandomuser extends React.Component {
                     <a  href="/"><font color="black">Home</font></a>
                     <a class="active" href="/p"><font color="black">Product</font></a>
                     <a href="/contact"><font color="black">Contact</font></a>
+                    <a href="/cart"><font color="black">Cart</font></a>
 
                     <div class="search-container">
 
@@ -165,7 +166,7 @@ export default class fetchrandomuser extends React.Component {
                                         }
 
 
-                                    </div> : <div></div>
+                                    </div> : <div>{d.ITEM_NUMBER==1001?<div><br/><center><b class ="size">Product Not Found :(</b></center></div>:<div></div>}</div>
 
                                    
                             ))}
