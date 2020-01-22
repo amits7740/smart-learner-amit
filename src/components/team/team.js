@@ -25,7 +25,7 @@ class team extends React.Component {
         <p class="title">Data Warehousing</p>
        <p> <b>Team Leader</b></p>
         <p>anamika_chatterjee@in.ibm.com</p>
-        <p><center><button class="button3" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=000GRQ744" target="_blank"><b>Bluepage</b></a></button></center></p>
+        <p><center><button class="button3" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=121822744" target="_blank"><b>Bluepage</b></a></button></center></p>
       </div>
     </div>
   </div>
