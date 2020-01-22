@@ -72,7 +72,7 @@ html {
   color: grey;
 }
 
-.button {
+.button1 {
   border: none;
   outline: 0;
   display: inline-block;
@@ -84,7 +84,7 @@ html {
   width: 100%;
 }
 
-.button:hover {
+.button1:hover {
   background-color: #555;
 }
 .ff{
