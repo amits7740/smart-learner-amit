@@ -38,7 +38,7 @@ html {
 }
 
 .column {
-  float: left;
+
   width: 327px;
   margin-bottom: 16px;
   padding: 20px 8px;
@@ -54,12 +54,14 @@ html {
 .card {
   box-shadow: 50px 9px 8px 0 rgba(0, 0, 0, 0.2);
 height:500px;
+
 }
 
 .container {
   padding:  10px 16px;
   width: 400px;
 }
+
 
 .container::after, .row::after {
   content: "";
@@ -76,7 +78,7 @@ height:500px;
   color: grey;
 }
 
-.button1 {
+.button3 {
   border: none;
   outline: 0;
   display: inline-block;
@@ -91,14 +93,8 @@ height:500px;
 .button1:hover {
   background-color: #555;
 }
-
-button1 {
-  outline: none !important;
-  border: none;
-  background: transparent;
-  }
-
 .ff{
+  position: center;
     height:300px;
     width:300px;
     
@@ -204,16 +200,22 @@ textarea::-moz-placeholder {color: #999999;}
 textarea:-ms-input-placeholder {color: #999999;}
 
 /*---------------------------------------------*/
-
 button {
 outline: none !important;
 border: none;
 background: transparent;
 }
-
-button:hover {
+button3 {
+  outline: none !important;
+  border: none;
+  background: transparent;
+  }
+button3:hover {
 cursor: pointer;
 }
+button:hover {
+  cursor: pointer;
+  }
 
 iframe {
 border: none !important;
