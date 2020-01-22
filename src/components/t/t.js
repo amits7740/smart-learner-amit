@@ -65,9 +65,10 @@ render(){
     return (
         <div className="productContainer1">
              <div class="topnav">
-        <a class="active" href="/"><font color="black">Home</font></a>
-        <a href="/contact"><font color="black">Contact</font></a>
-        
+             <a  href="/"><font color="black">Home</font></a>
+                    <a class="active" href="/p"><font color="black">Product</font></a>
+                    <a href="/contact"><font color="black">Contact</font></a>
+                    <a  href="/team"><font color="black">Team Members</font></a>
         <div class="search-container">
         
            
