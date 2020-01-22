@@ -40,7 +40,7 @@ class tshirt extends React.Component {
       <img class="ff"src="./sayantan.png" alt="Jane" />
       <div class="container">
         <h2>Sayantan Roy</h2>
-        <p class="title">Senior System Engineer(Application Develper-C#.Net)</p>
+        <p class="title">Senior System Engineer</p>
         <p> Team Caption</p>
         <p>sayaroy3@in.ibm.com</p>
         <p><center><button class="button" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=00902V744" target="_blank">Bluepage</a></button></center></p>
