@@ -21,9 +21,9 @@ class team extends React.Component {
     <div class="card" width="400px">
       <img class="ff"src="./anamikadi.JPG" alt="Jane" />
       <div class="container">
-        <h2>Anamika Chatterjee</h2>
+        <h3>Anamika Chatterjee</h3>
         <p class="title">Data Warehousing</p>
-       <p> Team Leader</p>
+       <p> <b>Team Leader</b></p>
         <p>anamika_chatterjee@in.ibm.com</p>
         <p><center><button class="button3" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=000GRQ744" target="_blank"><b>Bluepage</b></a></button></center></p>
       </div>
@@ -33,9 +33,9 @@ class team extends React.Component {
     <div class="card" width="400px">
       <img class="ff"src="./sayantan.png" alt="Jane" />
       <div class="container">
-        <h2>Sayantan Roy</h2>
+        <h3>Sayantan Roy</h3>
         <p class="title">Senior System Engineer</p>
-        <p> Team Captain</p>
+        <p><b> Team Captain</b></p>
         <p>sayaroy3@in.ibm.com</p>
         <p><center><button class="button3" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=00902V744" target="_blank">Bluepage</a></button></center></p>
       </div>
@@ -45,7 +45,7 @@ class team extends React.Component {
     <div class="card" width="400px">
       <img class="ff"src="./Amit.jpeg" alt="Jane" />
       <div class="container">
-        <h2>Amit Singh</h2>
+        <h3>Amit Singh</h3>
         <p class="title">Application Developer - RPA</p>
        
         <p>amits121@in.ibm.com</p>
@@ -60,7 +60,7 @@ class team extends React.Component {
     <div class="card" width="400px">
       <img class="ff"src="./hara.png" alt="Jane" />
       <div class="container">
-        <h2>Hara Jena</h2>
+        <h3>Hara Jena</h3>
         <p class="title">Application Developer - RPA</p>
        
         <p>harajena@in.ibm.com</p>
@@ -72,7 +72,7 @@ class team extends React.Component {
     <div class="card" width="400px">
       <img class="ff"src="./siri.jpeg" alt="Jane" />
       <div class="container">
-        <h2>Siri Chandana</h2>
+        <h3>Siri Chandana</h3>
         <p class="title">Application Developer - Devops</p>
        
         <p>snandan1@in.ibm.com</p>
@@ -84,7 +84,7 @@ class team extends React.Component {
     <div class="card" width="400px">
       <img class="ff"src="./abhipsa.jpeg" alt="Jane" />
       <div class="container">
-        <h2>Abhipsa chakraborty</h2>
+        <h3>Abhipsa Chakraborty</h3>
         <p class="title">Application Developer - Cognos</p>
        
         <p>abhipc94@in.ibm.com</p>
