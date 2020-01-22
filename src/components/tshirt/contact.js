@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table, Button, Alert } from 'react-bootstrap';
-import './tshirt.css'
+import './contact.css'
 
 
 class tshirt extends React.Component {
@@ -18,89 +18,65 @@ class tshirt extends React.Component {
                     <a href="/"><font color="black">Home</font></a>
                     <a href="/p"><font color="black">Product</font></a>
                     <a  class="active" href="/contact"><font color="black">Contact</font></a>
-
+                    <a  href="/team"><font color="black">Team Members</font></a>
                 </div>
-    <div  >
-    <p1><b><font color="red">Team Memebers</font></b></p1><br/>
-    <div class="row">
-    <div class="column">
-    <div class="card" width="400px">
-      <img class="ff"src="./anamikadi.JPG" alt="Jane" />
-      <div class="container">
-        <h2>Anamika Chatterjee</h2>
-        <p class="title">Data Warehousing</p>
-       <p> Team Leader</p>
-        <p>anamika_chatterjee@in.ibm.com</p>
-        <p><center><button class="button" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=000GRQ744" target="_blank">Bluepage</a></button></center></p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card" width="400px">
-      <img class="ff"src="./sayantan.png" alt="Jane" />
-      <div class="container">
-        <h2>Sayantan Roy</h2>
-        <p class="title">Senior System Engineer</p>
-        <p> Team Captain</p>
-        <p>sayaroy3@in.ibm.com</p>
-        <p><center><button class="button" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=00902V744" target="_blank">Bluepage</a></button></center></p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card" width="400px">
-      <img class="ff"src="./Amit.jpeg" alt="Jane" />
-      <div class="container">
-        <h2>Amit Singh</h2>
-        <p class="title">Application Developer - RPA</p>
-       
-        <p>amits121@in.ibm.com</p>
-        <p><center><button class="button" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=000GRQ744" target="_blank">Bluepage</a></button></center></p>
-      </div>
-    </div>
-  </div>
 
- 
-  
-  <div class="column">
-    <div class="card" width="400px">
-      <img class="ff"src="./hara.png" alt="Jane" />
-      <div class="container">
-        <h2>Hara Jena</h2>
-        <p class="title">Application Developer - RPA</p>
-       
-        <p>harajena@in.ibm.com</p>
-        <p><center><button class="button" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=09574J744" target="_blank">Bluepage</a></button></center></p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card" width="400px">
-      <img class="ff"src="./siri.jpg" alt="Jane" />
-      <div class="container">
-        <h2>Siri Chandana</h2>
-        <p class="title">Application Developer - Devops</p>
-       
-        <p>snandan1@in.ibm.com</p>
-        <p><center><button class="button" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=0004O8744" target="_blank">Bluepage</a></button></center></p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card" width="400px">
-      <img class="ff"src="./abhipsa.jpeg" alt="Jane" />
-      <div class="container">
-        <h2>Abhipsa chakraborty</h2>
-        <p class="title">Application Developer - Cognos</p>
-       
-        <p>abhipc94@in.ibm.com</p>
-        <p><center><button class="button" ><a href="https://w3.ibm.com/bluepages/profile.html?uid=0644F8744" target="_blank">Bluepage</a></button></center></p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 
+
+
+                <div class="container-contact100">
+		<div class="contact100-map"></div>
+
+		<div class="wrap-contact100">
+			<div class="contact100-form-title">
+				<span class="contact100-form-title-1">
+					Contact Us
+				</span>
+
+				<span class="contact100-form-title-2">
+					Feel free to drop us a line below!
+				</span>
+			</div>
+
+			<form class="contact100-form validate-form">
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Full Name:</span>
+					<input class="input100" type="text" name="name" placeholder="Enter full name" required/>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<span class="label-input100">Email:</span>
+					<input class="input100" type="email" name="email" placeholder="Enter email addess" required/>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Phone is required">
+					<span class="label-input100">Phone:</span>
+					<input class="input100" type="number" name="phone" placeholder="Enter phone number" required/>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<span class="label-input100">Message:</span>
+					<textarea class="input100" name="message" placeholder="Your Comment..." required></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn"  href="#myModal">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+    
 
 <footer class="footer_part">
         <div class="container">
