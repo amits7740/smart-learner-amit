@@ -16,7 +16,7 @@ export default class fetchrandomuser extends React.Component{
 
     async componentDidMount(){
    
-        const url="http://smartbuyms-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/products";
+        const url="https://smartbuyms-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/products";
         const response = await fetch(url);
         const data =await response.json();
        
