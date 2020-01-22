@@ -78,9 +78,6 @@ export default class fetchrandomuser extends React.Component {
 
         this.setState({ d: data.data, loading: false })
 
-        //const [currentPage, setCurrentPage] = useState(1);
-        //const [productPerPage] = useState(15);
-        //const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 
         console.log(data);
@@ -112,8 +109,8 @@ export default class fetchrandomuser extends React.Component {
                     <a  href="/"><font color="black">Home</font></a>
                     <a class="active" href="/p"><font color="black">Product</font></a>
                     <a href="/contact"><font color="black">Contact</font></a>
-                    <a href="/cart"><font color="black">Cart</font></a>
-
+                    <a  href="/team"><font color="black">Team Members</font></a>
+                    
                     <div class="search-container">
 
                         <input type="text" size="70" name = "srchtxt" placeholder="Search your Item here" onChange={evt => this.updateInputValue(evt)} />
@@ -166,7 +163,7 @@ export default class fetchrandomuser extends React.Component {
                                         }
 
 
-                                    </div> : <div>{d.ITEM_NUMBER==1001?<div><br/><center><b class ="size">Product Not Found :(</b></center></div>:<div></div>}</div>
+                                    </div> :<div>{d.ITEM_NUMBER==1001?<div><br/><center><b class ="size">Product not found :(</b></center></div>:<div></div>}</div>
 
                                    
                             ))}
