@@ -163,7 +163,7 @@ export default class fetchrandomuser extends React.Component {
                                         }
 
 
-                                    </div> :<div>{d.ITEM_NUMBER==1001?<div><br/><center><b class ="size">Product not found :(</b></center></div>:<div></div>}</div>
+                                    </div> :<div></div>
 
                                    
                             ))}
