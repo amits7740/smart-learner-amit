@@ -23,7 +23,7 @@ import P from '../p/p';
    async componentDidMount(){
 
 
-    const url="http://smartbuyms-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/products";
+    const url="https://smartbuyms-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/products";
     const response = await fetch(url);
     const data =await response.json();
        
@@ -35,7 +35,7 @@ import P from '../p/p';
     console.log(id)
     this.setState({ filter: id}); 
 
-    const urlnew="http://smartbuymsnew-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/products/" + id;
+    const urlnew="https://smartbuymsnew-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/products/" + id;
     const responsenew = await fetch(urlnew);
     const datanew =await responsenew.json();
 
