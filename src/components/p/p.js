@@ -137,7 +137,7 @@ export default class fetchrandomuser extends React.Component {
                                                     <div> <b class="size"> {d.DESCRIPTION}</b></div>
                                                     <img class="p13"  onClick={evt => this.showDetails(d.ITEM_NUMBER)}src={"http://django-ex-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/" + d.ITEM_NUMBER} />
 
-                                                    <br /><b class="size1">Size:</b> {d.SKU_ATTRIBUTE_VALUE1}<br /><b class="size1">Colour:</b> {d.SKU_ATTRIBUTE_VALUE2} <br /><b class="size1">Price:</b><b class="size2"> {d.LIST_PRICE}$</b><br /><center><font color="white"><b>{d.DISCOUNT=='0.0'?<div></div>:<div class="mf">{(d.DISCOUNT)*100} % off</div>} </b></font></center>
+                                                    <br /><b class="size1">Size:</b> {d.SKU_ATTRIBUTE_VALUE1}<br /><b class="size1">Colour:</b> {d.SKU_ATTRIBUTE_VALUE2} <br /><b class="size1">Price:</b><b class="size2"> {d.LIST_PRICE}$</b><br /><font color="red"><b>{d.DISCOUNT=='0.0'?<div></div>:<div>{(d.DISCOUNT)*100} % off</div>} </b></font>
 
                                                     <img src="img/new.png" class="new" alt="" />
                                                 </div>
