@@ -1,8 +1,12 @@
 import React, { component } from 'react';
+import useState from 'react';
 import { Table, Button, Alert } from 'react-bootstrap';
 import './p.css';
 import Pagination from '../pagination/pagination';
 import { browserHistory } from "react-router";
+import SimpleForm from './SimpleForm';
+import './App.css';
+
 
 
 
@@ -20,6 +24,7 @@ const recognition = BrowserSpeechRecognition
 const browserSupportsSpeechRecognition = recognition !== null
 
 export default class fetchrandomuser extends React.Component {
+
     if(browserSupportsSpeechRecognition) {
         recognition.continous = true
         recognition.interimResults = true
@@ -77,55 +82,59 @@ export default class fetchrandomuser extends React.Component {
         const data = await response.json();
 
         this.setState({ d: data.data, loading: false })
-
-
-
         console.log(data);
-
-
     }
+    
     updateInputValue(evt) {
         this.setState({ filter: evt.target.value });
     }
 
     showDetails(num) {
-       window.open('/t?id=' + num,'_blank');
+        window.open('/t?id=' + num, '_blank');
 
     }
-
-
-
+ 
     render() {
+
         if (this.state.loading) {
             return <div>loading...</div>;
         }
 
-
-
-
+       
         return (
+
+            
             <div className="productContainer1">
                 <div class="topnav">
-                    <a  href="/"><font color="black">Home</font></a>
+                    <a href="/"><font color="black">Home</font></a>
                     <a class="active" href="/p"><font color="black">Product</font></a>
                     <a href="/contact"><font color="black">Contact</font></a>
-                    <a  href="/team"><font color="black">Team Members</font></a>
-                    
+                    <a href="/team"><font color="black">Team Members</font></a>
+
                     <div class="search-container">
 
-                        <input type="text" size="70" name = "srchtxt" placeholder="Search your Item here" onChange={evt => this.updateInputValue(evt)} />
+                        <input type="text" size="70" name="srchtxt" placeholder="Search your Item here" onChange={evt => this.updateInputValue(evt)} />
                         {this.state.listening ? <div></div> : <img onClick={this.toggleListen} src="mic.png" />}
                     </div>
                 </div>
                 <section class="banner_part" >
                     <center><h1 class="tt"><b>Welcome to Products</b></h1></center>
-                   
-                    <div class="name">
+                    
+
          
-                    <div class="grid-container" >
-                 
+
+
+
+
+
+
+
+                    <div class="name">
+
+                        <div class="grid-container" >
+
                             {this.state.d.map(d => (
- 
+
                                 this.state.filter == '' || d.DESCRIPTION.toLowerCase().includes(this.state.filter.toLowerCase()) || d.SKU_ATTRIBUTE_VALUE1.toLowerCase().includes(this.state.filter.toLowerCase()) || d.BRAND.toLowerCase().includes(this.state.filter.toLowerCase()) ?
 
                                     <div class="grid-item">
@@ -135,41 +144,45 @@ export default class fetchrandomuser extends React.Component {
                                                 <div class="flip-card-front1">
 
                                                     <div> <b class="size"> {d.DESCRIPTION}</b></div>
-                                                    <img class="p13"  onClick={evt => this.showDetails(d.ITEM_NUMBER)}src={"http://django-ex-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/" + d.ITEM_NUMBER} />
+                                                    <img class="p13" onClick={evt => this.showDetails(d.ITEM_NUMBER)} src={"http://django-ex-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/" + d.ITEM_NUMBER} />
 
-                                                    <br /><b class="size1">Size:</b> {d.SKU_ATTRIBUTE_VALUE1}<br /><b class="size1">Colour:</b> {d.SKU_ATTRIBUTE_VALUE2} <br /><b class="size1">Price:</b><b class="size2"> {d.LIST_PRICE}$</b><br /><center><font color="white"><b>{d.DISCOUNT=='0.0'  || d.DISCOUNT==null?<div></div>:<div class="mf">{(d.DISCOUNT)*100} % off</div>} </b></font></center>
+                            <br /><b class="size1">Size:</b> {d.SKU_ATTRIBUTE_VALUE1}<br /><b class="size1">Colour:</b> {d.SKU_ATTRIBUTE_VALUE2} <br /><b class="size1">Price: </b><b class="size2">  {d.LIST_PRICE}$</b><br /><center><font color="white"><b>{d.DISCOUNT=='0.0' || d.DISCOUNT==null ?<div></div>:<div class="mf">{(d.DISCOUNT)*100} % off</div>} </b></font></center>
 
                                                     <img src="img/new.png" class="new" alt="" />
-                                                </div>
-
-                                                <div class="flip-card-back1">
-
-                                                    <b class="size1">Description:</b>  {d.LONG_DESCRIPTION}<br /><b class="size1">In Stock : </b>{d.IN_STOCK} <br /><b class="size1">Brand:</b> {d.BRAND}
-                                                    <img src="img/new.png" class="new" alt="" />
-
                                                 </div>
                                             </div>
 
                                         </div>
-
-
-
-
-
-
-                                     {d.IN_STOCK === 'Yes' ?<button onClick={evt => this.showDetails(d.ITEM_NUMBER)} class="button instagram" ><span class="gradient"></span><r class="t">Buy</r></button> :
-                                            <a class="button instagram" ><span class="gradient"></span><b><font color="red">Out of stock</font></b></a>
+                                        {d.IN_STOCK === 'Yes' ? <button onClick={evt => this.showDetails(d.ITEM_NUMBER)} class="button instagram" ><span class="gradient"></span><r >Buy</r></button> :
+                                            <button type="button" class="button instagram" data-toggle="modal" href="#myModal"><span class="gradient"></span><r >Reserve for me</r></button>
 
                                         }
 
 
-                                    </div> :<div></div>
+                                    </div> : <div></div>
 
-                                   
+
                             ))}
 
-
-</div>
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="icon-box">
+				<i class="material-icons">&#xE876;</i>
+				</div>				
+				<h4 >Reserved!</h4>	
+			</div>
+			<div class="modal-body">
+				<p class="text-center">You will be notified when product will be available</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div> 
+                        </div>
 
                     </div>
                 </section>
@@ -183,11 +196,7 @@ export default class fetchrandomuser extends React.Component {
 
     }
 
-
-
-}
-
-
+    }
 
 
 
