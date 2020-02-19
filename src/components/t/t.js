@@ -102,7 +102,7 @@ this.state.filter == ''|| d.ITEM_NUMBER.includes(this.state.filter)?
         <p>Price:<k class="size21">{d.LIST_PRICE}$</k></p><br/><br/>
    
        <div> {d.IN_STOCK === 'Yes' ?  <button type="button" class="trigger-btn" data-toggle="modal" href="#myModal">buy now</button>:
-            <button type="button" class="trigger-btn" data-toggle="modal" >Out of stock</button>}</div>
+            <button type="button" class="trigger-btn" data-toggle="modal" href="#myModall" >Out of stock</button>}</div>
  <div >{d.IN_STOCK === 'Yes' ?  <button type="button" class="trigger-btn" data-toggle="modal" onClick={evt => this.showDetails(d.ITEM_NUMBER)} >Add to cart</button>:
            <div></div>}</div>
         
@@ -164,7 +164,7 @@ this.state.filter == ''|| d.ITEM_NUMBER.includes(this.state.filter)?
                                                    <div> <b class="size"> {dnew.DESCRIPTION}</b></div>
                                                    <img class="p13"  onClick={evt => this.showDetails(dnew.ITEM_NUMBER)}src={"http://django-ex-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/" + dnew.ITEM_NUMBER} />
 
-                                                    <br /><b class="size1">Size:</b> {dnew.SKU_ATTRIBUTE_VALUE1}<br /><b class="size1">Colour:</b> {dnew.SKU_ATTRIBUTE_VALUE2} <br /><b class="size1">Price:</b><b class="size2"> {dnew.LIST_PRICE}$</b><br /><center><font color="white"><b>{dnew.DISCOUNT=='0.0'  || dnew.DISCOUNT==null?<div></div>:<div class="mf">{(dnew.DISCOUNT)*100} % off</div>} </b></font></center>
+                                                   <br /><b class="size1">Size:</b> {dnew.SKU_ATTRIBUTE_VALUE1}<br /><b class="size1">Colour:</b> {dnew.SKU_ATTRIBUTE_VALUE2} <br /><b class="size1">Price: </b><b class="size2">  {dnew.LIST_PRICE}$</b><br /><center><font color="white"><b>{dnew.DISCOUNT=='0.0' || dnew.DISCOUNT==null ?<div></div>:<div class="mf">{(dnew.DISCOUNT)*100} % off</div>} </b></font></center>
 
                                                    <img src="img/new.png" class="new" alt="" />
                                                </div>
@@ -185,7 +185,7 @@ this.state.filter == ''|| d.ITEM_NUMBER.includes(this.state.filter)?
 
 
                                     {dnew.IN_STOCK === 'Yes' ?<button onClick={evt => this.showDetailsnew(dnew.ITEM_NUMBER)} class="button instagram" ><span class="gradient"></span><r class="t">Buy</r></button> :
-                                           <a class="button instagram" ><span class="gradient"></span><b><font color="red">Out of stock</font></b></a>
+                                           <button type="button" class="button instagram" data-toggle="modal" href="#myModall"><span class="gradient"></span><r >Reserve for me</r></button>
 
                                        }
 
@@ -194,7 +194,24 @@ this.state.filter == ''|| d.ITEM_NUMBER.includes(this.state.filter)?
 
                                   
                            ))}
-
+<div id="myModall" class="modal fade">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="icon-box">
+				<i class="material-icons">&#xE876;</i>
+				</div>				
+				<h4 >Reserved!</h4>	
+			</div>
+			<div class="modal-body">
+				<p class="text-center">You will be notified when product will be available</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div> 
 
 </div>
 
