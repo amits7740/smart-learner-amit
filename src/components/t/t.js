@@ -164,7 +164,7 @@ this.state.filter == ''|| d.ITEM_NUMBER.includes(this.state.filter)?
                                                    <div> <b class="size"> {dnew.DESCRIPTION}</b></div>
                                                    <img class="p13"  onClick={evt => this.showDetails(dnew.ITEM_NUMBER)}src={"http://django-ex-smart-learner.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/" + dnew.ITEM_NUMBER} />
 
-                                                    <br /><b class="size1">Size:</b> {d.SKU_ATTRIBUTE_VALUE1}<br /><b class="size1">Colour:</b> {d.SKU_ATTRIBUTE_VALUE2} <br /><b class="size1">Price:</b><b class="size2"> {d.LIST_PRICE}$</b><br /><center><font color="white"><b>{d.DISCOUNT=='0.0'  || d.DISCOUNT==null?<div></div>:<div class="mf">{(d.DISCOUNT)*100} % off</div>} </b></font></center>
+                                                    <br /><b class="size1">Size:</b> {dnew.SKU_ATTRIBUTE_VALUE1}<br /><b class="size1">Colour:</b> {dnew.SKU_ATTRIBUTE_VALUE2} <br /><b class="size1">Price:</b><b class="size2"> {dnew.LIST_PRICE}$</b><br /><center><font color="white"><b>{dnew.DISCOUNT=='0.0'  || dnew.DISCOUNT==null?<div></div>:<div class="mf">{(dnew.DISCOUNT)*100} % off</div>} </b></font></center>
 
                                                    <img src="img/new.png" class="new" alt="" />
                                                </div>
