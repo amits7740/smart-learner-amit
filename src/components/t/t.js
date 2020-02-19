@@ -166,7 +166,7 @@ this.state.filter == ''|| d.ITEM_NUMBER.includes(this.state.filter)?
 
                                                    <br /><b class="size1">Size:</b> {dnew.SKU_ATTRIBUTE_VALUE1}<br /><b class="size1">Colour:</b> {dnew.SKU_ATTRIBUTE_VALUE2} <br /><b class="size1">Price: </b><b class="size2">  {dnew.LIST_PRICE}$</b><br /><center><font color="white"><b>{dnew.DISCOUNT=='0.0' || dnew.DISCOUNT==null ?<div></div>:<div class="mf">{(dnew.DISCOUNT)*100} % off</div>} </b></font></center>
 
-                                                   <img src="img/new.png" class="new" alt="" />
+                                                    {dnew.IN_STOCK === 'Yes' ? <img src="img/new.png" class="new" alt="" />:<img src="img/ofs.png" class="new" alt="" />}
                                                </div>
 
                                                <div class="flip-card-back1">
