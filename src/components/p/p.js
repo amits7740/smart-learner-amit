@@ -1,11 +1,10 @@
 import React, { component } from 'react';
-import useState from 'react';
+
 import { Table, Button, Alert } from 'react-bootstrap';
 import './p.css';
 import Pagination from '../pagination/pagination';
 import { browserHistory } from "react-router";
-import SimpleForm from './SimpleForm';
-import './App.css';
+
 
 
 
